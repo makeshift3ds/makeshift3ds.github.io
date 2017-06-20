@@ -4,287 +4,316 @@
 <head>
   <meta charset="utf-8">
   <title>The Open Source Outboard - By MakeShift</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="The Open Source Outboard is a 3d printable outboard motor for rc watercraft.">
-  <meta name="author" content="MakeShift">
-	<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css">
+  <meta id="viewport" content="width=device-width, initial-scale=1">
+  <meta id="description" content="The Open Source Outboard is a 3d printable outboard motor for rc watercraft.">
+  <meta id="author" content="MakeShift">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css">
+  <!--[if lte IE 8]>
+    <link rel="stylesheet" href="/css/menu-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="/css/menu.css">
+  <!--<![endif]-->
+  <!--[if lt IE 9]>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script>
+  <![endif]-->
 </head>
 
 <body>
-	<div class="pure-g">
-	    <div class="pure-u-1-3">
-	    	<div class="pure-menu">
-	    	<ul style="display: flex; list-style-type: none; flex-flow: row wrap; justify-content: space-around;">
-					<li style="padding: 2px;"><a href="#osob-opensource">Open Source</a></li>
-					<li style="padding: 2px;"><a href="#osob-disclaimer">Disclaimer</a></li>
-					<li style="padding: 2px;"><a href="#osob-currentstate">Current State</a></li>
-					<li style="padding: 2px;"><a href="#osob-videos">Videos/Build Logs</a></li> 
-					<li style="padding: 2px;"><a href="#osob-bom">Bill of Materials</a></li> 
-					<li style="padding: 2px;"><a href="#osob-print-settings">Print Settings</a></li> 
-					<li style="padding: 2px;"><a href="#osob-log">Update Log</a></li>
-					<li style="padding: 2px;"><a href="#osob-filenaming">File Naming</a></li>
-				</ul>
-	    </div>
-	    <div class="pure-u-2-3">
-				<p>The Open Source Outboard is a 3d printable outboard motor for rc watercraft. It is an original design that was developed as part of a larger effort of making an radio controlled fishing boat, a lofty goal. If you are going to shoot into the sky, at least aim for a star. That’s what mama always said.</p>
+    <div id="layout">
+        <!-- Menu toggle -->
+        <a href="#menu" id="menuLink" class="menu-link">
+            <!-- Hamburger icon -->
+            <span></span>
+        </a>
 
-				<span ><h2 class="content-subhead" name="osob-opensource">Open Source:</h3> </spa2>
-				<p>This is being released open-source with ulterior motives. I’m hoping that people will print this and provide input on how it can be improved, and how I can improve my future designs. This is new ground for me so I’m just parotting what I see other people do :P</p>
-				 
-				<h2 class="content-subhead" name="osob-disclaimer">Disclaimer:</h32 
-				<p>This is an adult toy and it should be used with caution. It has a blade that can spin very fast, held together with plastic threads extruded by your printer. I don’t trust my printer to make a shelf bracket that would hang above my head. So I do not EVER run this out of the water. One has not jettisoned yet, but it is a demonstrated possibility. PLEASE BE SAFE!</p>
-				 
-				<h2 class="content-subhead" name="osob-state">Current State: Version 1.0</h2>
-				<p>This is a proof of concept that performs very well in my opinion. RCBenchy is a bad design choice for speed testing, I was lucky that it stayed upright. Extensive testing and tuning is the next order of business. The RCBenchy running the dual motors in the video was using 3650 3750kv sensorless brushless motors and a 3s lipo. I could reach 1/4-1/3 throttle before it became too dangerous for the poor benchy. These are the issues that need attention.</p>
-				 
-				<ul>
-					<li>
-						<strong>Motor/Power</strong> Both motors(2845, 3650) go into protection mode if given to much throttle. 2s or 3s, within spec and outside of spec had the same effect. I'm hoping an rc hero comes along and recommends a better configuration. Maybe configuring the esc is the fix, I haven't done that yet. 
-					</li>
-					<li>
-						<strong>Cavitation:</strong> SS MakeShift running the dual motor system would reach 1/2 throttle and start cavitating. I have theories to try, but they are only based on what I assume is happening.
-						<ul>
-							<li>Enlarge anti-ventilation plate [easy fix if it works]</li>
-							<li>Extend midsection more - to put prop deeper. [not a good fix - adds printing time]</li>
-				 			<li>Decrease prop pitch - [really grasping here]</li>
-				 		</ul>
-				 	</li>
-				 	<li>
-				 		<strong>Improve Profile:</strong> Drag should be reduced, at high speeds the water could channel around the profile better. I left room in the design for these adjustments. Clock doesn’t have enough time however.
-						<ul>
-							<li>Create a skinny midsection, use clay or something similar to overbuild and find a profile that works.</li>
-						</ul>
-					</li>
-					<li>
-						<strong>Test cooling system:</strong> I overdid one run and it caused the water cooler to deform (without coolant running).
-						<ul>
-							<li>
-								Create a test rig to get reliable data on the performance of the cooler. I think it will work, but I’m not willing to bet anyone.
-							</li>
-							<li>
-								Look harder for a motor that doesn’t require cooling, or uses air cooling instead. The cowling would look pretty sweet with a fan on it.
-							</li>
-							<li>
-								If the cooler does not work, find an aftermarket motor cooler and integrate it into the design.
-							</li>
-						</ul>
-					</li>
-					<li>
-						<strong>Replace bearings:</strong> Their maintenance is the worst part of this design. 
-						<ul>
-							<li>
-								I’m experimenting with 3d printable silicon nitride bearings. Initial tests are promising. However it requires a smaller nozzle diameter (.25mm) to achieve the tolerances required. So I’m not recommending it in this build.
-							</li>
-						</ul>
-					</li>
-					<li>
-						<strong>Create housings for components:</strong> things will get wet. We can protect them with plastic.
-					</li>
-				</ul>
-				 
-				<h2 class="content-subhead" name="osob-videos">Videos</h2>
-				<ul>
-					<li>
-						<a href="https://youtu.be/N6qkKHWMePk">Open Source Outboard - Version 1 - Design Review</a>
-					</li>
-					<li>
-				 		<a href="https://youtu.be/tVpq6YWC9ns">Open Source Outboard - Version 1 - Build Log</a>
-				 	</li>
-				 	<li>
-				 		<a href="https://youtu.be/_XBBsyASD9s">Single Motor Steering System - Version ALPHA - Build Log</a>
-				 	</li>
-				 	<li>
-						<a href="https://youtu.be/ZvIUB4n7xy0">Dual Motor Steering System - Version ALPHA - Build Log</a>
-					</li>
-				</ul>
-				 
-				<h2 class="content-subhead" name="osob-bom">BOM</h2>
-				<p>I'm linking to Amazon because it is fast and convenient. There are better prices to be found. I'm also linking to <a href="https://www.accu.co.uk/en/">Accugroup</a> because I like their selection and the hardware has been great quality. I live in the states and they are in the uk, but its worth the wait in my opinion. I only use stainless/torx type because dealing with a stripped screw in plastic is frustrating to put it politely.</p>
+        <div id="menu">
+            <div class="pure-menu">
+                <a class="pure-menu-heading" href="#">OSOBv1</a>
 
-				<ul>
-					<li>
-						<strong>Open Source Outboard</strong>
-						<ul>
-							<li>
-								Required RC Electronics: the type is optional, these are my choices.
-								<ul>
-									<li><a href="https://www.amazon.com/gp/product/B01NABG5TY">Transmitter/Receiver</a></li>
-									<li><a href="https://www.amazon.com/gp/product/B06ZZJ4R5Z">ESC</a> <em>(usually bought with motor)</em></li>
-									<li><a href="https://www.amazon.com/gp/product/B00L2V09VQ">3s Lipo Battery</a> or <a href="https://www.amazon.com/gp/product/B0072AEHIC">2s Lipo Battery</a></li>
-								</ul>
-							</li>
+                <ul class="pure-menu-list">
+                  <li class="pure-menu-item"><a href="#osob-opensource" class="pure-menu-link">Open Source</a></li>
+                  <li class="pure-menu-item"><a href="#osob-disclaimer" class="pure-menu-link">Disclaimer</a></li>
+                  <li class="pure-menu-item"><a href="#osob-currentstate" class="pure-menu-link">Current State</a></li>
+                  <li class="pure-menu-item"><a href="#osob-videos" class="pure-menu-link">Videos/Build Logs</a></li> 
+                  <li class="pure-menu-item"><a href="#osob-bom" class="pure-menu-link">Bill of Materials</a></li> 
+                  <li class="pure-menu-item"><a href="#osob-print-settings" class="pure-menu-link">Print Settings</a></li> 
+                  <li class="pure-menu-item"><a href="#osob-log" class="pure-menu-link">Update Log</a></li>
+                  <li class="pure-menu-item"><a href="#osob-filenaming" class="pure-menu-link">File Naming</a></li>
+                </ul>
+            </div>
+        </div>
 
-							<li>Sensorless Brushless Motor: 
-								(Supported Sizes [
-									<a href="https://www.amazon.com/gp/product/B00WQPQ4MU">2845</a>, 
-									<a href="https://www.amazon.com/gp/product/B00Z9QF8UC">3650 (no water cooler)</a>
-								])
-							</li>
-							<li>
-								<a href="https://www.amazon.com/gp/product/B071YTFDBV">4mm hollow carbon fiber rod</a>
-							</li>
-							<li>
-								Stainless Steel Fasteners:
-								<ul>
-									<li>
-										<a href="https://www.accu.co.uk/en/hexalobular-pan-head-screws/7731-SHP-M3-6-A2">(4) M3x6mm</a>
-									</li>
-									<li>
-										<a href="https://www.accu.co.uk/en/hexalobular-pan-head-screws/7732-SHP-M3-8-A2">(2) M3x8mm</a>
-									</li>
-									<li>
-										<a href="https://www.accu.co.uk/en/hexalobular-pan-head-screws/7731-SHP-M3-10-A2">(2) M3x10mm</a>
-									</li>
-									<li>
-										<a href="https://www.accu.co.uk/en/hexalobular-pan-head-screws/7731-SHP-M3-14-A2">(1) M3x14mm</a>
-									</li>
-									<li>
-										<a href="https://www.accu.co.uk/en/hexagon-nuts/7888-HPN-M3-A2">(4) M3 Nuts</a>
-									</li>
-									<li>
-										<a href="https://www.accu.co.uk/en/hexagon-nylon-locking-nuts/7944-HNN-M3-A2">(1) M3 Nylon Locking Nut</a>
-									</li>
-								</ul>
-							</li>
-							<li>
-								<a href="https://www.amazon.com/gp/product/B00G9W20VU">(3) 4mm ID Flanged Bearings</a>
-							</li>
-							<li>
-								<a href="https://www.amazon.com/gp/product/B00OK6EZZ6">(1) 3.17mm to 4mm Shaft Coupler</a> 
-								<em>Much less expensive internationally</em>
-							</li>
-							<li>
-								<a href="https://www.amazon.com/gp/product/B00OIHLUFA">(1) Water Pump</a>
-							</li>
-						</ul>
-					</li>
-					<li>
-						<strong>Single Motor Steering System</strong>
-						<ul>
-							<li>
-								<a href="https://hobbyking.com/en_us/turnigytm-tr-1160a-mini-servo-2-1kg-0-11sec-16g.html">Micro Servo</a>
-							</li>
-							<li>
-								<a href="https://www.amazon.com/gp/product/B01HFX12K6">(2) 3mm ID flanged bearings</a>
-							</li>
-							<li>
-								Stainless Steel Fasteners:
-								<ul>
-									<li>
-										<a href="https://www.accu.co.uk/en/hexalobular-pan-head-screws/7731-SHP-M3-8-A2">(3) M3x8mm</a>
-									</li>
-									<li>
-										<a href="https://www.accu.co.uk/en/hexalobular-pan-head-screws/7731-SHP-M3-10-A2">(1) M3x10mm</a>
-									</li>
-									<li>
-										<a href="https://www.accu.co.uk/en/hexalobular-pan-head-screws/7731-SHP-M3-20-A2">(1) M3x20mm</a>
-									</li>
-									<li>
-										<a href="https://www.accu.co.uk/en/hexalobular-pan-head-screws/7731-SHP-M3-30-A2">(1) M3x30mm</a>
-									</li>
-									<li>
-										<a href="https://www.accu.co.uk/en/hexalobular-pan-head-screws/7731-SHP-M3-50-A2">(3) M3x50mm</a>
-									</li>
-									<li>
-										<a href="https://www.accu.co.uk/en/hexagon-nylon-locking-nuts/7944-HNN-M3-A2">(5) M3 Nylon Locking Nut</a>
-									</li>
-									<li>
-										<a href="https://www.accu.co.uk/en/hexagon-nuts/7888-HPN-M3-A2">(3) M3 Nuts</a>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</li>
-					<li>
-						<strong>Dual Motor Steering System</strong>
-						<ul>
-							<li>
-								<a href="https://www.amazon.com/Savox-Voltage-Waterproof-Standard-Digital/dp/B00F8OT0VI/ref=sr_1_1?ie=UTF8&qid=1497363802&sr=8-1&keywords=savox+sw-0230mg">Waterproof Servo</a> <em>(TODO: locate less expensive servo with same dimensions)</em>
-							</li>
-							<li>
-								<a href="https://www.amazon.com/gp/product/B01HFX12K6">(7) 3mm ID flanged bearings</a>
-							</li>
-							<li>
-								Stainless Steel Fasteners:
-								<ul>
-									<li>
-										<a href="https://www.accu.co.uk/en/hexalobular-pan-head-screws/7731-SHP-M3-8-A2">(6) M3x8mm</a>
-									</li>
-									<li>
-										<a href="https://www.accu.co.uk/en/hexalobular-pan-head-screws/7731-SHP-M3-10-A2">(8) M3x10mm</a>
-									</li>
-									<li>
-										<a href="https://www.accu.co.uk/en/hexalobular-pan-head-screws/7731-SHP-M3-20-A2">(2) M3x20mm</a>
-									</li>
-									<li>
-										<a href="https://www.accu.co.uk/en/hexalobular-pan-head-screws/7731-SHP-M3-25-A2">(2) M3x25mm</a>
-									</li>
-									<li>
-										<a href="https://www.accu.co.uk/en/hexalobular-pan-head-screws/7731-SHP-M3-50-A2">(6) M3x50mm</a>
-									</li>
-									<li>
-										<a href="https://www.accu.co.uk/en/hexagon-nylon-locking-nuts/7944-HNN-M3-A2">(22) M3 Nylon Locking Nut</a>
-									</li>
-									<li>
-										<a href="https://www.accu.co.uk/en/hexagon-nuts/7888-HPN-M3-A2">(2) M3 Nuts</a>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</li>
-				</ul>
-				 
-				<h2 class="content-subhead" name="osob-print-settings">Print Settings</h2>
-				<p>Needs to be printed with a filament that has little shrinkage. I use PET-G, ABS is an option. PLA may not work, I haven't tried it however. These settings are required, because the design has dimensions that are multiples of that line width. This means all the parts can be printed at the same time. It also means, that if you find your hardware does not fit well (screws should slide through with little resistance, nuts should drop in nut traps but hold when being threaded) you can adjust the scale of the entire assembly. All the parts will fit together still and the hardware hole should change. This could affect the way the slicer plans the print, so check the layers for gaps before printing. Gaps in the walls is bad.</p>
+        <div id="main">
+            <div class="header">
+                <h1>The Open Source Outboard</h1>
+                <h2>3d printable outboard motor for rc watercraft.</h2>
+            </div>
 
-				<ul>
-					<li>.4mm nozzle</li>
-					<li>.4mm line width</li>
-					<li>.4mm wall thickness</li>
-					<li>100% infill</li>
-					<li>No supports</li>
-					<li>.2mm layer height or better</li>
-				</ul>
-				 
-				<h2 class="content-subhead" name="osob-log">Update Log</h2>
-				<ul>
-					<li>
-						<b>Open Source Outboard</b>
-				 		<ul>
-				 			<li>06/14/2017 - v1 released</li>
-				 			<li>06/21/2017 - Webpage released</li>
-				 		</ul>
-				 	</li>
-				 	<li>
-				 		<b>Single Motor Steering System</b>
-				 		<ul>
-				 			<li>06/14/2017 - alpha version released</li>
-				 		</ul>
-				 	</li>
-				 	<li>
-				 		<b>Dual Motor Steering System</b>
-				 		<ul>
-				 			<li>06/14/2017 - alpha version released</li>
-				 		</ul>
-				 	</li>
-				</ul>
+            <div class="content">
+                <h2 class="content-subhead">About This Design</h2>
+                <p>The Open Source Outboard is a 3d printable outboard motor for rc watercraft. It is an original design that was developed as part of a larger effort of making an radio controlled fishing boat, a lofty goal. If you are going to shoot into the sky, at least aim for a star. That’s what mama always said.</p>
 
-				<h2 class="content-subhead" name="osob-file-naming">File Name Formatting</h2>
-				<p>I use shorthand to label the design files, formatted with a structure of <pre>[build_name]-[major_version]-[part_name]-[(optional)distinctions]-[(optional)minor_version]</pre>. (e.g. osobv1-motor_cooler_mount-3650-2 - which translates to <pre>open source outboard version 1 - motor cooler mount - (for) 3650 - part version 2</pre>).</p>
+        <h2 class="content-subhead" id="osob-opensource">Open Source:</h3>
+        <p>This is being released open-source with ulterior motives. I’m hoping that people will print this and provide input on how it can be improved, and how I can improve my future designs. This is new ground for me so I’m just parotting what I see other people do :P</p>
+         
+        <h2 class="content-subhead" id="osob-disclaimer">Disclaimer:</h2>
+        <p>This is an adult toy and it should be used with caution. It has a blade that can spin very fast, held together with plastic threads extruded by your printer. I don’t trust my printer to make a shelf bracket that would hang above my head. So I do not EVER run this out of the water. One has not jettisoned yet, but it is a demonstrated possibility. PLEASE BE SAFE!</p>
+         
+        <h2 class="content-subhead" id="osob-state">Current State: Version 1.0</h2>
+        <p>This is a proof of concept that performs very well in my opinion. RCBenchy is a bad design choice for speed testing, I was lucky that it stayed upright. Extensive testing and tuning is the next order of business. The RCBenchy running the dual motors in the video was using 3650 3750kv sensorless brushless motors and a 3s lipo. I could reach 1/4-1/3 throttle before it became too dangerous for the poor benchy. These are the issues that need attention.</p>
+         
+        <ul>
+          <li>
+            <strong>Motor/Power</strong> Both motors(2845, 3650) go into protection mode if given to much throttle. 2s or 3s, within spec and outside of spec had the same effect. I'm hoping an rc hero comes along and recommends a better configuration. Maybe configuring the esc is the fix, I haven't done that yet. 
+          </li>
+          <li>
+            <strong>Cavitation:</strong> SS MakeShift running the dual motor system would reach 1/2 throttle and start cavitating. I have theories to try, but they are only based on what I assume is happening.
+            <ul>
+              <li>Enlarge anti-ventilation plate [easy fix if it works]</li>
+              <li>Extend midsection more - to put prop deeper. [not a good fix - adds printing time]</li>
+              <li>Decrease prop pitch - [really grasping here]</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Improve Profile:</strong> Drag should be reduced, at high speeds the water could channel around the profile better. I left room in the design for these adjustments. Clock doesn’t have enough time however.
+            <ul>
+              <li>Create a skinny midsection, use clay or something similar to overbuild and find a profile that works.</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Test cooling system:</strong> I overdid one run and it caused the water cooler to deform (without coolant running).
+            <ul>
+              <li>
+                Create a test rig to get reliable data on the performance of the cooler. I think it will work, but I’m not willing to bet anyone.
+              </li>
+              <li>
+                Look harder for a motor that doesn’t require cooling, or uses air cooling instead. The cowling would look pretty sweet with a fan on it.
+              </li>
+              <li>
+                If the cooler does not work, find an aftermarket motor cooler and integrate it into the design.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Replace bearings:</strong> Their maintenance is the worst part of this design. 
+            <ul>
+              <li>
+                I’m experimenting with 3d printable silicon nitride bearings. Initial tests are promising. However it requires a smaller nozzle diameter (.25mm) to achieve the tolerances required. So I’m not recommending it in this build.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Create housings for components:</strong> things will get wet. We can protect them with plastic.
+          </li>
+        </ul>
+         
+        <h2 class="content-subhead" id="osob-videos">Videos</h2>
+        <ul>
+          <li>
+            <a href="https://youtu.be/N6qkKHWMePk">Open Source Outboard - Version 1 - Design Review</a>
+          </li>
+          <li>
+            <a href="https://youtu.be/tVpq6YWC9ns">Open Source Outboard - Version 1 - Build Log</a>
+          </li>
+          <li>
+            <a href="https://youtu.be/_XBBsyASD9s">Single Motor Steering System - Version ALPHA - Build Log</a>
+          </li>
+          <li>
+            <a href="https://youtu.be/ZvIUB4n7xy0">Dual Motor Steering System - Version ALPHA - Build Log</a>
+          </li>
+        </ul>
+         
+        <h2 class="content-subhead" id="osob-bom">BOM</h2>
+        <p>I'm linking to Amazon because it is fast and convenient. There are better prices to be found. I'm also linking to <a href="https://www.accu.co.uk/en/">Accugroup</a> because I like their selection and the hardware has been great quality. I live in the states and they are in the uk, but its worth the wait in my opinion. I only use stainless/torx type because dealing with a stripped screw in plastic is frustrating to put it politely.</p>
 
-				<p>There are not many parts here, but they are subject to change. This naming structure will help keep the files organized.</p>
+        <ul>
+          <li>
+            <strong>Open Source Outboard</strong>
+            <ul>
+              <li>
+                Required RC Electronics: the type is optional, these are my choices.
+                <ul>
+                  <li><a href="https://www.amazon.com/gp/product/B01NABG5TY">Transmitter/Receiver</a></li>
+                  <li><a href="https://www.amazon.com/gp/product/B06ZZJ4R5Z">ESC</a> <em>(usually bought with motor)</em></li>
+                  <li><a href="https://www.amazon.com/gp/product/B00L2V09VQ">3s Lipo Battery</a> or <a href="https://www.amazon.com/gp/product/B0072AEHIC">2s Lipo Battery</a></li>
+                </ul>
+              </li>
 
-				<p>To select the correct design files.</p>
-				<ul>
-					<li>locate the design you want to start <em>(osob = Open Source Outboard, smss = Single Motor Steering System, dmss = Dual Motor Steering System)</em></li>
-					<li>use the update log to determine which version is right for your setup</li>
-					<li>find any distinctions <em>(aka variations/remixes)</em> that match your specific motor/esc/servo</li>
-					<li>if there are minor versions, look at the section in the update log that matches that design file</li>
-					<li>determine which minor version works for you - usually it is the most recent</li>
-					<li>don't see the right one for you? request a variation. or better yet, make a variation :)</li>
-				</ul>
-			</div>
-	</div>
-</body>
+              <li>Sensorless Brushless Motor: 
+                (Supported Sizes [
+                  <a href="https://www.amazon.com/gp/product/B00WQPQ4MU">2845</a>, 
+                  <a href="https://www.amazon.com/gp/product/B00Z9QF8UC">3650 (no water cooler)</a>
+                ])
+              </li>
+              <li>
+                <a href="https://www.amazon.com/gp/product/B071YTFDBV">4mm hollow carbon fiber rod</a>
+              </li>
+              <li>
+                Stainless Steel Fasteners:
+                <ul>
+                  <li>
+                    <a href="https://www.accu.co.uk/en/hexalobular-pan-head-screws/7731-SHP-M3-6-A2">(4) M3x6mm</a>
+                  </li>
+                  <li>
+                    <a href="https://www.accu.co.uk/en/hexalobular-pan-head-screws/7732-SHP-M3-8-A2">(2) M3x8mm</a>
+                  </li>
+                  <li>
+                    <a href="https://www.accu.co.uk/en/hexalobular-pan-head-screws/7731-SHP-M3-10-A2">(2) M3x10mm</a>
+                  </li>
+                  <li>
+                    <a href="https://www.accu.co.uk/en/hexalobular-pan-head-screws/7731-SHP-M3-14-A2">(1) M3x14mm</a>
+                  </li>
+                  <li>
+                    <a href="https://www.accu.co.uk/en/hexagon-nuts/7888-HPN-M3-A2">(4) M3 Nuts</a>
+                  </li>
+                  <li>
+                    <a href="https://www.accu.co.uk/en/hexagon-nylon-locking-nuts/7944-HNN-M3-A2">(1) M3 Nylon Locking Nut</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="https://www.amazon.com/gp/product/B00G9W20VU">(3) 4mm ID Flanged Bearings</a>
+              </li>
+              <li>
+                <a href="https://www.amazon.com/gp/product/B00OK6EZZ6">(1) 3.17mm to 4mm Shaft Coupler</a> 
+                <em>Much less expensive internationally</em>
+              </li>
+              <li>
+                <a href="https://www.amazon.com/gp/product/B00OIHLUFA">(1) Water Pump</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Single Motor Steering System</strong>
+            <ul>
+              <li>
+                <a href="https://hobbyking.com/en_us/turnigytm-tr-1160a-mini-servo-2-1kg-0-11sec-16g.html">Micro Servo</a>
+              </li>
+              <li>
+                <a href="https://www.amazon.com/gp/product/B01HFX12K6">(2) 3mm ID flanged bearings</a>
+              </li>
+              <li>
+                Stainless Steel Fasteners:
+                <ul>
+                  <li>
+                    <a href="https://www.accu.co.uk/en/hexalobular-pan-head-screws/7731-SHP-M3-8-A2">(3) M3x8mm</a>
+                  </li>
+                  <li>
+                    <a href="https://www.accu.co.uk/en/hexalobular-pan-head-screws/7731-SHP-M3-10-A2">(1) M3x10mm</a>
+                  </li>
+                  <li>
+                    <a href="https://www.accu.co.uk/en/hexalobular-pan-head-screws/7731-SHP-M3-20-A2">(1) M3x20mm</a>
+                  </li>
+                  <li>
+                    <a href="https://www.accu.co.uk/en/hexalobular-pan-head-screws/7731-SHP-M3-30-A2">(1) M3x30mm</a>
+                  </li>
+                  <li>
+                    <a href="https://www.accu.co.uk/en/hexalobular-pan-head-screws/7731-SHP-M3-50-A2">(3) M3x50mm</a>
+                  </li>
+                  <li>
+                    <a href="https://www.accu.co.uk/en/hexagon-nylon-locking-nuts/7944-HNN-M3-A2">(5) M3 Nylon Locking Nut</a>
+                  </li>
+                  <li>
+                    <a href="https://www.accu.co.uk/en/hexagon-nuts/7888-HPN-M3-A2">(3) M3 Nuts</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Dual Motor Steering System</strong>
+            <ul>
+              <li>
+                <a href="https://www.amazon.com/Savox-Voltage-Waterproof-Standard-Digital/dp/B00F8OT0VI/ref=sr_1_1?ie=UTF8&qid=1497363802&sr=8-1&keywords=savox+sw-0230mg">Waterproof Servo</a> <em>(TODO: locate less expensive servo with same dimensions)</em>
+              </li>
+              <li>
+                <a href="https://www.amazon.com/gp/product/B01HFX12K6">(7) 3mm ID flanged bearings</a>
+              </li>
+              <li>
+                Stainless Steel Fasteners:
+                <ul>
+                  <li>
+                    <a href="https://www.accu.co.uk/en/hexalobular-pan-head-screws/7731-SHP-M3-8-A2">(6) M3x8mm</a>
+                  </li>
+                  <li>
+                    <a href="https://www.accu.co.uk/en/hexalobular-pan-head-screws/7731-SHP-M3-10-A2">(8) M3x10mm</a>
+                  </li>
+                  <li>
+                    <a href="https://www.accu.co.uk/en/hexalobular-pan-head-screws/7731-SHP-M3-20-A2">(2) M3x20mm</a>
+                  </li>
+                  <li>
+                    <a href="https://www.accu.co.uk/en/hexalobular-pan-head-screws/7731-SHP-M3-25-A2">(2) M3x25mm</a>
+                  </li>
+                  <li>
+                    <a href="https://www.accu.co.uk/en/hexalobular-pan-head-screws/7731-SHP-M3-50-A2">(6) M3x50mm</a>
+                  </li>
+                  <li>
+                    <a href="https://www.accu.co.uk/en/hexagon-nylon-locking-nuts/7944-HNN-M3-A2">(22) M3 Nylon Locking Nut</a>
+                  </li>
+                  <li>
+                    <a href="https://www.accu.co.uk/en/hexagon-nuts/7888-HPN-M3-A2">(2) M3 Nuts</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+         
+        <h2 class="content-subhead" id="osob-print-settings">Print Settings</h2>
+        <p>Needs to be printed with a filament that has little shrinkage. I use PET-G, ABS is an option. PLA may not work, I haven't tried it however. These settings are required, because the design has dimensions that are multiples of that line width. This means all the parts can be printed at the same time. It also means, that if you find your hardware does not fit well (screws should slide through with little resistance, nuts should drop in nut traps but hold when being threaded) you can adjust the scale of the entire assembly. All the parts will fit together still and the hardware hole should change. This could affect the way the slicer plans the print, so check the layers for gaps before printing. Gaps in the walls is bad.</p>
+
+        <ul>
+          <li>.4mm nozzle</li>
+          <li>.4mm line width</li>
+          <li>.4mm wall thickness</li>
+          <li>100% infill</li>
+          <li>No supports</li>
+          <li>.2mm layer height or better</li>
+        </ul>
+         
+        <h2 class="content-subhead" id="osob-log">Update Log</h2>
+        <ul>
+          <li>
+            <b>Open Source Outboard</b>
+            <ul>
+              <li>06/14/2017 - v1 released</li>
+              <li>06/21/2017 - Webpage released</li>
+            </ul>
+          </li>
+          <li>
+            <b>Single Motor Steering System</b>
+            <ul>
+              <li>06/14/2017 - alpha version released</li>
+            </ul>
+          </li>
+          <li>
+            <b>Dual Motor Steering System</b>
+            <ul>
+              <li>06/14/2017 - alpha version released</li>
+            </ul>
+          </li>
+        </ul>
+
+        <h2 class="content-subhead" id="osob-file-naming">File Name Formatting</h2>
+        <p>I use shorthand to label the design files, formatted with a structure of <pre>[build_name]-[major_version]-[part_name]-[(optional)distinctions]-[(optional)minor_version]</pre>. (e.g. osobv1-motor_cooler_mount-3650-2 - which translates to <pre>open source outboard version 1 - motor cooler mount - (for) 3650 - part version 2</pre>).</p>
+
+        <p>There are not many parts here, but they are subject to change. This naming structure will help keep the files organized.</p>
+
+        <p>To select the correct design files.</p>
+        <ul>
+          <li>locate the design you want to start <em>(osob = Open Source Outboard, smss = Single Motor Steering System, dmss = Dual Motor Steering System)</em></li>
+          <li>use the update log to determine which version is right for your setup</li>
+          <li>find any distinctions <em>(aka variations/remixes)</em> that match your specific motor/esc/servo</li>
+          <li>if there are minor versions, look at the section in the update log that matches that design file</li>
+          <li>determine which minor version works for you - usually it is the most recent</li>
+          <li>don't see the right one for you? request a variation. or better yet, make a variation :)</li>
+        </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/ui.js"></script>
+
+    </body>
 </html>
-
